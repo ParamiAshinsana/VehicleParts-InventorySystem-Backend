@@ -1,0 +1,33 @@
+CREATE DATABASE vehiclemanagementsystem;
+
+CREATE TABLE batteries (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  parttype VARCHAR(255),
+  brand VARCHAR(255),
+  quantity INT NOT NULL,
+  price DOUBLE(10, 2) NOT NULL,
+  status VARCHAR(255)
+);
+
+
+CREATE TABLE tires (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  parttype VARCHAR(255),
+  brand VARCHAR(255),
+  quantity INT NOT NULL,
+  price DOUBLE(10, 2) NOT NULL,
+  status VARCHAR(255)
+);
+
+
+CREATE TABLE oilfilters (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  parttype VARCHAR(255),
+  brand VARCHAR(255),
+  quantity INT NOT NULL,
+  price DOUBLE(10, 2) NOT NULL,
+  status VARCHAR(255)
+);

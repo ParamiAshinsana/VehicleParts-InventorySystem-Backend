@@ -1,19 +1,19 @@
 const db = require('../db');
 
-exports.addBattery = (req, res) => {
+exports.addTire = (req, res) => {
   const { name, parttype, brand, quantity, price, status } = req.body;
   db.query(
-    'INSERT INTO batteries (name, parttype, brand, quantity, price, status) VALUES (?, ?, ?, ?, ?, ?)',
+    'INSERT INTO tires (name, parttype, brand, quantity, price, status) VALUES (?, ?, ?, ?, ?, ?)',
     [name, parttype, brand, quantity, price, status],
     (err, result) => {
       if (err) return res.send(err);
-      res.json({ message: 'Battery added', id: result.insertId });
+      res.json({ message: 'Tire added', id: result.insertId });
     }
   );
 };
 
-exports.getBatteries = (req, res) => {
-  db.query('SELECT * FROM batteries', (err, result) => {
+exports.getTires = (req, res) => {
+  db.query('SELECT * FROM tires', (err, result) => {
     if (err) return res.send(err);
     res.json(result);
   });

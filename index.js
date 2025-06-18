@@ -7,11 +7,11 @@ app.use(express.json());
 
 
 const batteryRoutes = require('./routes/batteryRoutes');
-// const tireRoutes = require('./routes/tireRoutes');
+const tireRoutes = require('./routes/tireRoutes');
 // const oilFilterRoutes = require('./routes/oilFilterRoutes');
 
 app.use('/batteries', batteryRoutes);
-// app.use('/tires', tireRoutes);
+app.use('/tires', tireRoutes);
 // app.use('/oilfilters', oilFilterRoutes);
 
 const PORT = 5000;
